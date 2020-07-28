@@ -1,6 +1,6 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import logo from './logo.svg'
+import './App.css'
 import useLottie from './useLottie'
 import animationData from './animation.json'
 
@@ -18,7 +18,7 @@ function App() {
     animationData,
   })
 
-  const handleChange: React.ChangeEventHandler<HTMLInputElement> =  async (e) => {
+  const handleChange: React.ChangeEventHandler<HTMLInputElement> = async (e) => {
     const checked = e.currentTarget.checked
     // mock network connection
     const result = await mockRequest(checked)
@@ -37,10 +37,10 @@ function App() {
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
         {render()}
-        <input type={'checkbox'} checked={checked} onChange={handleChange}/>
+        <input type={'checkbox'} checked={checked} onChange={handleChange} />
       </header>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

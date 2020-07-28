@@ -1,8 +1,8 @@
 import lottie, { AnimationConfigWithData, AnimationItem } from 'lottie-web'
 import React from 'react'
 
-type Options =  {
-  animationData: any,
+type Options = {
+  animationData: any
 }
 
 const useLottie = (options: Options) => {
@@ -46,12 +46,18 @@ const useLottie = (options: Options) => {
 
   React.useEffect(() => {
     const listeners = [
-      { name: 'complete', handler: () => {
-        hide()
-        } },
-      { name: 'enterFrame', handler: () => {
-        show()
-        }},
+      {
+        name: 'complete',
+        handler: () => {
+          hide()
+        },
+      },
+      {
+        name: 'enterFrame',
+        handler: () => {
+          show()
+        },
+      },
     ].filter(({ handler }) => !!handler)
 
     if (listeners.length === 0) {
@@ -80,6 +86,5 @@ const useLottie = (options: Options) => {
     replay,
   }
 }
-
 
 export default useLottie
